@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ISS.Biblioteca.Commons.UI"
         mc:Ignorable="d"
         Title="LoginWindow" Height="300" Width="500" FontSize="16"
-        WindowStyle="None"
+        WindowStyle="None"                
         MouseDown="Window_MouseDown">
     <Grid>
         <Grid.Background>

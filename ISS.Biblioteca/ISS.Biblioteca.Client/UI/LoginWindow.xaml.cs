@@ -31,7 +31,7 @@ namespace ISS.Biblioteca.Commons.UI
             var cnp = CnpBox.Text;
             var token = TokenBox.Text;
             var clientObserver = new ClientObserver();
-            Utilizator utilizator = null;
+            Utilizator utilizator;
             try
             {
                 utilizator = App.Server.Login(cnp, token, clientObserver);                

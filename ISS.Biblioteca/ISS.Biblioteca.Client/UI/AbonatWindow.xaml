@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ISS.Biblioteca.Commons.UI"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="AbonatWindow" Height="650" Width="900"
+        Title="AbonatWindow" Height="620" Width="870"
         Loaded="Window_Loaded"
         MouseDown="Window_MouseDown"
         WindowStyle="None"
@@ -16,21 +16,27 @@
         Closed="Window_Closed">
     <Grid Background="Transparent">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70"></ColumnDefinition>
+            <ColumnDefinition Width="42"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="32"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Row="1" Grid.Column="1" Style="{DynamicResource ResourceKey=CloseButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top"               
-                Click="CloseButton_Click" Panel.ZIndex="2"/>
-        <Grid Grid.Row="1" Grid.Column="1">
-            <Grid.Background>
+        <Border Grid.Row="1" Grid.Column="1" CornerRadius="10">
+            <Border.Background>
                 <ImageBrush ImageSource="pack://application:,,,/ISS.Biblioteca.Client;component/Pictures/wall_main.jpg"/>
-            </Grid.Background>
-        </Grid>
+            </Border.Background>
+            <Button Grid.Row="1" Grid.Column="1" Style="{DynamicResource ResourceKey=CloseButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top"               
+                Click="CloseButton_Click" Panel.ZIndex="2" ClipToBounds="True">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="0 10 0 0"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Border>
         <Image Source="pack://application:,,,/ISS.Biblioteca.Client;component/Pictures/heart.png"
                Grid.Row="1" Grid.Column="1"
                Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"               

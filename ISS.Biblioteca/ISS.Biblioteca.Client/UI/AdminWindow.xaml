@@ -67,7 +67,7 @@
                 </ListView>
             </StackPanel>
         </TabItem>
-        <TabItem Header="Administreaza conturi" FontSize="14">
+        <TabItem Header="Creeaza cont" FontSize="14">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -112,6 +112,22 @@
                     </Style>
                 </Grid.Resources>
             </Grid>
+        </TabItem>
+        <TabItem Header="Modifica cont">
+            <StackPanel>
+                <TextBlock>Cnp</TextBlock>
+                <TextBox></TextBox>
+                <Button>Cauta</Button>
+
+                <TextBlock>Nume</TextBlock>
+                <TextBox></TextBox>
+                <TextBlock>Telefon</TextBlock>
+                <TextBox></TextBox>
+                <TextBlock>Adresa</TextBlock>
+                <TextBox></TextBox>
+                <Button>Reseteaza parola</Button>
+                <Button>Actualizeaza</Button>
+            </StackPanel>
         </TabItem>
     </TabControl>
 </Window>
